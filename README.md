@@ -1,2 +1,2 @@
-# packerfiles
+# Packer templates
  
