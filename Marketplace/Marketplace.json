@@ -31,7 +31,8 @@
                 "apt-get -y install python3-jsonschema",
                 "dpkg -i cloud-init_ubuntu_latest.deb",
                 "apt-get install -f -y",
-                "wget -O /var/lib/cloud/scripts/per-instance/provision.sh https://"
+                "wget -O /var/lib/cloud/scripts/per-instance/provision.sh https://raw.githubusercontent.com/dfinr/packer-templates/main/Marketplace/cloud-init/per-instance/provision.sh",
+                "chmod +x /var/lib/cloud/scripts/per-instance/provision.sh"
             ]
         }
     ]
