@@ -24,6 +24,10 @@
                 "sleep 30",
                 "cd /tmp",
                 "wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_ubuntu_latest.deb",
+                "md5sum cloud-init_ubuntu_latest.deb",
+                "apt install python3-jinja2 -y",
+                "apt install python3-jsonpatch -y",
+                "apt install ppython3-jsonschema -y",
                 "dpkg -i cloud-init_ubuntu_latest.deb",
                 "apt-get install -f -y"
             ]
