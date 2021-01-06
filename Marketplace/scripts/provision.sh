@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Ran cloud-init per-instance." > /root/firstboot
+echo $(date -u) "Ran cloud-init per-instance." > /root/firstboot
