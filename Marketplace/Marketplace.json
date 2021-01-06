@@ -20,12 +20,12 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "Marketplace/scripts",
-            "destination": "/tmp"
+            "source": "Marketplace/scripts/provision.sh",
+            "destination": "/tmp/provision.sh"
         },
         {
             "type": "shell",
-            "script": "install-cloud-init.sh"
+            "script": "Marketplace/scripts/install-cloud-init.sh"
         }
     ]
 }
