@@ -9,3 +9,6 @@ apt-get -y install python3-jsonpatch
 apt-get -y install python3-jsonschema
 dpkg -i cloud-init_ubuntu_latest.deb
 apt-get install -f -y
+
+mv /tmp/provision.sh /var/lib/cloud/scripts/per-instance/provision.sh
+chmod +x /var/lib/cloud/scripts/per-instance/provision.sh

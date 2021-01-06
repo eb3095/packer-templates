@@ -20,8 +20,8 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "Marketplace/cloud-init/per-instance/provision.sh",
-            "destination": "/var/lib/cloud/scripts/per-instance/provision.sh"
+            "source": "Marketplace/provision.sh",
+            "destination": "/tmp/provision.sh"
         },
         {
             "type": "file",
@@ -33,7 +33,6 @@
             "inline": [
                 "#!/bin/bash",
                 "sleep 60",
-                "chmod +x /var/lib/cloud/scripts/per-instance/provision.sh",
                 "chmod +x /tmp/install-cloud-init.sh",
                 "source /tmp/install-cloud-init.sh"
             ]
