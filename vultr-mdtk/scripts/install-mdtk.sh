@@ -29,7 +29,7 @@ server {
 EOM
 
 ln -s /etc/nginx/sites-available/code-server /etc/nginx/sites-enabled/code-server
-rm /etc/nginx/sites-available/default
+rm /etc/nginx/sites-enabled/default
 
 cd /tmp
 wget https://github.com/errata-ai/vale/releases/download/v2.6.8/vale_2.6.8_Linux_64-bit.tar.gz
