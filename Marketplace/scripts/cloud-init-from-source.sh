@@ -22,7 +22,6 @@ systemctl enable cloud-init.service
 systemctl enable cloud-config.service
 systemctl enable cloud-final.service
 
-systemctl start cloud-init
 sleep 5
 
 mv /tmp/provision.sh /var/lib/cloud/scripts/per-instance/provision.sh
