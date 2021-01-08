@@ -25,7 +25,11 @@
         },
         {
             "type": "shell",
-            "script": "Marketplace/scripts/cloud-init-from-source.sh"
+            "script": "Marketplace/scripts/install-cloud-init.sh"
+        },
+        {
+            "type": "shell",
+            "script": "Marketplace/scripts/setup.sh"
         }
     ]
 }
