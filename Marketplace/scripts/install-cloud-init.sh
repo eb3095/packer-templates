@@ -8,9 +8,3 @@ apt update -y
 
 dpkg -i cloud-init_universal_latest.deb
 apt-get install -f -y
-
-sleep 5
-
-mkdir -p /var/lib/cloud/scripts/per-instance/
-mv /tmp/provision.sh /var/lib/cloud/scripts/per-instance/provision.sh
-chmod +x /var/lib/cloud/scripts/per-instance/provision.sh

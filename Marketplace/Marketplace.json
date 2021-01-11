@@ -20,8 +20,8 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "Marketplace/scripts/provision.sh",
-            "destination": "/tmp/provision.sh"
+            "source": "Marketplace/scripts/per-instance-provision.sh",
+            "destination": "/tmp/per-instance-provision.sh"
         },
         {
             "type": "shell",
