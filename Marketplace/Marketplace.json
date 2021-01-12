@@ -20,8 +20,13 @@
     "provisioners": [
         {
             "type": "file",
-            "source": "Marketplace/scripts/provision.sh",
-            "destination": "/tmp/provision.sh"
+            "source": "Marketplace/scripts/per-instance-provision.sh",
+            "destination": "/tmp/per-instance-provision.sh"
+        },
+        {
+            "type": "file",
+            "source": "Marketplace/scripts/per-boot-setup.sh",
+            "destination": "/tmp/per-boot-setup.sh"
         },
         {
             "type": "shell",
@@ -29,7 +34,7 @@
         },
         {
             "type": "shell",
-            "script": "Marketplace/scripts/setup.sh"
+            "script": "Marketplace/scripts/setup-snapshot.sh"
         }
     ]
 }
