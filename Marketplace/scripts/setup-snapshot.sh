@@ -14,15 +14,15 @@ rm -f /etc/machine-id
 touch /etc/machine-id
 
 # Create script folders for cloud-init
-mkdir -p /var/lib/cloud/scripts/per-instance/
+mkdir -p /opt/vultr/marketplace/
 mkdir -p /var/lib/cloud/scripts/per-boot/
 
 # Install scripts
-mv /tmp/per-instance-provision.sh /var/lib/cloud/scripts/per-instance/provision.sh
+mv /tmp/per-instance-provision.sh /opt/vultr/marketplace/provision.sh
 mv /tmp/per-boot-setup.sh /var/lib/cloud/scripts/per-boot/setup.sh
 
 # Make executable
-chmod +x /var/lib/cloud/scripts/per-instance/provision.sh
+chmod +x /opt/vultr/marketplace/provision.sh
 chmod +x /var/lib/cloud/scripts/per-boot/setup.sh
 
 # Add SSH key to instance
