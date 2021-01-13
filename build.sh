@@ -2,4 +2,4 @@
 
 . .env
 
-packer Marketplace.json
+./packer Marketplace.json
