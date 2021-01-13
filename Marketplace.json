@@ -5,36 +5,33 @@
     "sensitive-variables": [
         "vultr_api_key"
     ],
-    "builders": [
-        {
-            "type": "vultr",
-            "api_key": "{{ user `vultr_api_key` }}",
-            "snapshot_description": "Marketplace-Test-{{isotime \"2006-01-02_1504\"}}",
-            "region_id": "ewr",
-            "plan_id": "vc2-1c-1gb",
-            "os_id": "387",
-            "ssh_username": "root",
-            "state_timeout": "15m"
-        }
-    ],
-    "provisioners": [
-        {
+    "builders": [{
+        "type": "vultr",
+        "api_key": "{{ user `vultr_api_key` }}",
+        "snapshot_description": "Marketplace-Test-{{isotime \"2006-01-02_1504\"}}",
+        "region_id": "ewr",
+        "plan_id": "vc2-1c-1gb",
+        "os_id": "387",
+        "ssh_username": "root",
+        "state_timeout": "15m"
+    }],
+    "provisioners": [{
             "type": "file",
-            "source": "Marketplace/scripts/per-instance-provision.sh",
+            "source": "scripts/per-instance-provision.sh",
             "destination": "/tmp/per-instance-provision.sh"
         },
         {
             "type": "file",
-            "source": "Marketplace/scripts/per-boot-setup.sh",
+            "source": "scripts/per-boot-setup.sh",
             "destination": "/tmp/per-boot-setup.sh"
         },
         {
             "type": "shell",
-            "script": "Marketplace/scripts/install-cloud-init.sh"
+            "script": "scripts/install-cloud-init.sh"
         },
         {
             "type": "shell",
-            "script": "Marketplace/scripts/setup-snapshot.sh"
+            "script": "scripts/setup-snapshot.sh"
         }
     ]
 }
