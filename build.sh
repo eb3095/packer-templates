@@ -2,4 +2,4 @@
 
 . .env
 
-./packer Marketplace.json
+./packer build Marketplace.json
